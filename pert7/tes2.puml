@@ -1,0 +1,24 @@
+@startuml
+package App{
+    package model {
+        class user {
+            - name
+            - email
+        }
+note bottom: php artisan make:filamnet-resource UserResource --generate
+    }
+package migration{
+    class Create_user {
+        - id
+        - name
+        }
+note bottom: php artisan make:filamnet-resource UserResource --generate
+    }
+package filament_resource{
+    class userResource {
+        + test
+        }
+note bottom: php artisan make:filamnet-resource UserResource --generate
+    }
+}
+@enduml

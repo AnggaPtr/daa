@@ -1,0 +1,17 @@
+@startuml
+actor Admin
+actor Supir
+
+rectangle "Driver Analysis System" {
+    Admin --> (Collect Data)
+    (Collect Data) --> (Monitor and Analyze Data)
+    (Monitor and Analyze Data) --> (Generate Reports)
+    (Monitor and Analyze Data) --> (Predict Safety Issues)
+    Supir <-- (Provide Feedback)
+}
+
+rectangle "Dashboard Visualization" {
+    Admin --> (View Reports)
+    Supir --> (View Personal Performance)
+}
+@enduml

@@ -1,0 +1,17 @@
+@startuml
+start
+:Start Data Collection Process;
+:Collect driver performance data 
+(e.g., trip count, average speed, feedback);
+:Analyze safety records 
+(accidents and violations);
+:Process data using real-time monitoring 
+and machine learning algorithms;
+if (Potential safety issues detected?) then (Yes)
+  :Generate safety alerts and recommendations;
+else (No)
+  :Continue normal data analysis;
+endif
+:Generate performance dashboard report;
+stop
+@enduml
