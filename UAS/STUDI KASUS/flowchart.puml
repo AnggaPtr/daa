@@ -1,0 +1,17 @@
+@startuml 1
+
+start
+:Orang Tua Mengenali Pentingnya PAUD;
+:Orang Tua Mendaftarkan Anak ke PAUD;
+if (PAUD Tersedia?) then (Ya)
+  :Anak Mengikuti Program PAUD;
+  :Guru Memberikan Pembelajaran;
+  :Anak Mengembangkan Keterampilan Sosial dan Kognitif;
+  :Pemerintah Mendukung PAUD;
+  :Masyarakat Mendukung Kegiatan PAUD;
+else (Tidak)
+  :Orang Tua Memberikan Pendidikan di Rumah;
+endif
+stop
+
+@enduml

@@ -1,0 +1,59 @@
+@startuml 1
+
+entity "Anak" {
+  * ID_Anak : Integer
+  --
+  Nama : String
+  Usia : Integer
+  Jenis_Kelamin : String
+  ID_Ortu : Integer
+  ID_PAUD : Integer
+}
+
+entity "Orang Tua" {
+  * ID_Ortu : Integer
+  --
+  Nama : String
+  Alamat : String
+  No_Telepon : String
+}
+
+entity "Guru" {
+  * ID_Guru : Integer
+  --
+  Nama : String
+  Spesialisasi : String
+  ID_PAUD : Integer
+}
+
+entity "PAUD" {
+  * ID_PAUD : Integer
+  --
+  Nama : String
+  Lokasi : String
+  Fasilitas : String
+}
+
+entity "Pemerintah" {
+  * ID_Pemerintah : Integer
+  --
+  Nama : String
+  Program_Dukungan : String
+}
+
+entity "Masyarakat" {
+  * ID_Masyarakat : Integer
+  --
+  Nama : String
+  Jenis_Dukungan : String
+}
+
+' Relasi antara entitas
+Anak --|> Orang_Tua : "Diasuh oleh"
+Anak --|> PAUD : "Terdaftar di"
+Guru --|> PAUD : "Mengajar di"
+PAUD --|> Pemerintah : "Diawasi oleh"
+Guru --|> Pemerintah : "Tergabung dalam"
+Masyarakat --|> PAUD : "Mendukung Kegiatan"
+
+@enduml

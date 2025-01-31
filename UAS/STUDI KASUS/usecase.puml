@@ -1,0 +1,33 @@
+@startuml 1
+
+actor "Orang Tua" as OT
+actor "Anak" as A
+actor "Guru" as G
+actor "Pemerintah" as P
+actor "Masyarakat" as M
+
+rectangle "Sistem PAUD" as System {
+  usecase "Mendaftarkan Anak ke PAUD" as UC1
+  usecase "Mengajar Anak" as UC2
+  usecase "Mendukung PAUD" as UC3
+  usecase "Belajar di PAUD" as UC4
+  usecase "Memberikan Bantuan Pendidikan" as UC5
+  usecase "Mengawasi Implementasi PAUD" as UC6
+  usecase "Menyediakan Sarana dan Prasarana" as UC7
+}
+
+OT --> UC1
+A --> UC4
+G --> UC2
+P --> UC3
+M --> UC5
+P --> UC6
+P --> UC7
+UC1 ..> UC4
+UC2 ..> UC4
+UC3 ..> UC2
+UC5 ..> UC3
+UC6 ..> UC3
+UC7 ..> UC3
+
+@enduml
